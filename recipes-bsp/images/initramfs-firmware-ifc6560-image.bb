@@ -13,4 +13,4 @@ BAD_RECOMMENDATIONS = "\
     linux-firmware-ath10k-wcn3990 \
 "
 
-require initramfs-firmware-image.inc
+require recipes-bsp/images/initramfs-firmware-image.inc
