@@ -1,7 +1,7 @@
 # meta-qcom
 
-![latest build](https://github.com/linaro/meta-qcom/actions/workflows/push.yml/badge.svg)
-![daily builds](https://github.com/linaro/meta-qcom/actions/workflows/daily.yml/badge.svg)
+![latest build](https://github.com/linux-msm/meta-qcom-extras/actions/workflows/push.yml/badge.svg)
+![daily builds](https://github.com/linux-msm/meta-qcom-extras/actions/workflows/daily.yml/badge.svg)
 
 ## Introduction
 
@@ -11,6 +11,15 @@ This layer depends on:
 
 ```
 URI: https://github.com/openembedded/openembedded-core.git
+layers: meta
+branch: master
+revision: HEAD
+```
+
+and
+
+```
+URI: https://github.com/Linaro/meta-qcom.git
 layers: meta
 branch: master
 revision: HEAD
