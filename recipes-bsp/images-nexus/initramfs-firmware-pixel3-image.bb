@@ -6,4 +6,4 @@ PACKAGE_INSTALL += " \
     firmware-qcom-pixel3 \
 "
 
-require initramfs-firmware-image.inc
+require recipes-bsp/images/initramfs-firmware-image.inc

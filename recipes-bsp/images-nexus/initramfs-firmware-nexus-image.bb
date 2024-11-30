@@ -21,4 +21,4 @@ PACKAGE_INSTALL += " \
     firmware-qcom-pixel5a-5g \
 "
 
-require initramfs-firmware-image.inc
+require recipes-bsp/images/initramfs-firmware-image.inc
