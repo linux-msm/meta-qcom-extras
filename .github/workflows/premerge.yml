@@ -8,24 +8,20 @@ jobs:
     uses: ./.github/workflows/build-template.yml
     with:
       host: debian-bookworm
-      images: core-image-base core-image-weston core-image-x11 initramfs-test-image initramfs-test-full-image initramfs-firmware-image initramfs-firmware-mega-image initramfs-rootfs-image cryptodev-module esp-qcom-image
-      machines: qcom-armv8a qcom-armv7a-modem qcom-armv7a
+      images: initramfs-firmware-image initramfs-firmware-mega-image
+        initramfs-firmware-ifc6410-image initramfs-firmware-ifc6560-image
+        initramfs-firmware-ecs-liva-qc710-image
+        initramfs-firmware-lenovo-miix-630-image
+        initramfs-firmware-lenovo-yoga-c630-image
+        initramfs-firmware-sc8180x-image
+        initramfs-firmware-x1e80100-crd-image
+
+      machines: qcom-armv8a qcom-armv7a
       variants: >-
-        qcom-armv8a-glibc-yocto qcom-armv8a-musl-yocto
-        qcom-armv7a-glibc-yocto qcom-armv7a-musl-yocto
-        qcom-armv7a-modem-glibc-linaro-qcomlt qcom-armv7a-modem-musl-linaro-qcomlt
-        qcom-armv8a-glibc-linaro-qcomlt
-        qcom-armv8a-glibc-yocto-noinitramfs
+        qcom-armv8a-glibc-yocto
+        qcom-armv8a-musl-yocto
+        qcom-armv7a-glibc-yocto
       ref: refs/pull/${{github.event.pull_request.number}}/merge
       branch: ${{github.base_ref}}
       url: ${{github.server_url}}/${{github.repository}}
     secrets: inherit
-
-  rpb:
-    uses: 96boards/oe-rpb-manifest/.github/workflows/build-template.yml@qcom/master
-    with:
-      local_repo: ${{github.repository}}
-      local_ref: refs/pull/${{github.event.pull_request.number}}/merge
-      branch: qcom/${{github.base_ref}}
-    secrets:
-      TUXSUITE_TOKEN: ${{ secrets.TUXSUITE_TOKEN }}

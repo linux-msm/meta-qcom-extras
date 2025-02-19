@@ -31,6 +31,8 @@ on:
 
 env:
   POKY_URL: https://git.yoctoproject.org/poky
+  OE_URL: https://github.com/openembedded/meta-openembedded
+  QCOM_URL: https://github.com/qualcomm-linux/meta-qcom
   DISTRO: poky
   TCLIBC: glibc musl
   KERNELS: linaro-qcomlt yocto
@@ -61,11 +63,15 @@ jobs:
             git_trees:
               - branch: ${{inputs.branch}}
                 url: $POKY_URL
+              - branch: ${{inputs.branch}}
+                url: $OE_URL
+              - branch: ${{inputs.branch}}
+                url: $QCOM_URL
               - ${{inputs.ref_type}}: ${{inputs.ref}}
                 url: ${{inputs.url}}
           distro: $DISTRO
           bblayers_conf:
-            - BBLAYERS += '../$(echo ${{github.repository}} | cut -d'/' -f2)'
+            - BBLAYERS += '../$(echo ${{github.repository}} | cut -d'/' -f2) ../meta-openembedded/meta-oe ../meta-qcom'
           artifacts: ["licenses"]
         EOF
 
