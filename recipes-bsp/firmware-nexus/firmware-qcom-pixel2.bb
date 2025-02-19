@@ -13,5 +13,5 @@ RDEPENDS:${PN} += "linux-firmware-qcom-adreno-a530"
 require firmware-qcom-pixel.inc
 
 do_install:append() {
-    install -m 0644 ${B}/firmware/a540_gpmu.fw2 ${D}${FW_QCOM_PATH}
+    install -m 0644 ${B}/firmware/a540_gpmu.fw2 ${D}${FW_QCOM_BASE_PATH}
 }
