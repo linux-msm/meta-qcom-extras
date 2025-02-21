@@ -1,7 +1,7 @@
 DESCRIPTION = "Tiny ramdisk image with Lenovo Yoga C630 firmware files"
 
 PACKAGE_INSTALL += " \
-    packagegroup-firmware-lenovo-yoga-c630 \
+    packagegroup-lenovo-yoga-c630-firmware \
 "
 
 require recipes-bsp/images/initramfs-firmware-image.inc

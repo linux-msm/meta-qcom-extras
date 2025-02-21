@@ -1,7 +1,7 @@
 DESCRIPTION = "Tiny ramdisk image with all Nexus and Pixel devices firmware files"
 
 PACKAGE_INSTALL += " \
-    packagegroup-firmware-ifc6560 \
+    packagegroup-ifc6560-firmware \
 "
 
 BAD_RECOMMENDATIONS = "\
