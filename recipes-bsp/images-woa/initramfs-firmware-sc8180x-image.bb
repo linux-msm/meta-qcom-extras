@@ -1,7 +1,7 @@
 DESCRIPTION = "Tiny ramdisk image with SC8180X devices firmware files"
 
 PACKAGE_INSTALL += " \
-    packagegroup-firmware-sc8180x \
+    packagegroup-sc8180x-firmware \
 "
 
 BAD_RECOMMENDATIONS = " \

@@ -1,8 +1,12 @@
-SUMMARY = "Firmware packages for the SC8180X devices"
+SUMMARY = "Packages for the SC8180X devices"
 
 inherit packagegroup
 
-RRECOMMENDS:${PN} += " \
+PACKAGES = " \
+    ${PN}-firmware \
+"
+
+RRECOMMENDS:${PN}-firmware = " \
     ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'linux-firmware-qcom-adreno-a640 linux-firmware-qcom-sc8180x-adreno', '', d)} \
     ${@bb.utils.contains('DISTRO_FEATURES', 'bluetooth', 'linux-firmware-qca-wcn399x', '', d)} \
     ${@bb.utils.contains('DISTRO_FEATURES', 'wifi', 'linux-firmware-ath10k-wcn3990', '', d)} \

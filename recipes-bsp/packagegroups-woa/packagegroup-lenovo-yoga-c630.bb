@@ -1,8 +1,12 @@
-SUMMARY = "Firmware packages for the Lenogo Yoga C630 laptop"
+SUMMARY = "Packages for the Lenogo Yoga C630 laptop"
 
 inherit packagegroup
 
-RRECOMMENDS:${PN} += " \
+PACKAGES = " \
+    ${PN}-firmware \
+"
+
+RRECOMMENDS:${PN}-firmware = " \
     ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'linux-firmware-qcom-adreno-a630 linux-firmware-qcom-lenovo-yoga-c630-adreno', '', d)} \
     ${@bb.utils.contains('DISTRO_FEATURES', 'bluetooth', 'linux-firmware-qca-wcn399x', '', d)} \
     ${@bb.utils.contains('DISTRO_FEATURES', 'wifi', 'linux-firmware-ath10k-wcn3990', '', d)} \

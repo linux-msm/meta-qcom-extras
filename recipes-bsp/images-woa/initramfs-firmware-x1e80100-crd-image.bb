@@ -1,7 +1,7 @@
 DESCRIPTION = "Tiny ramdisk image with X1E80100 CRD devices firmware files"
 
 PACKAGE_INSTALL += " \
-    packagegroup-firmware-x1e80100-crd \
+    packagegroup-x1e80100-crd-firmware \
 "
 
 BAD_RECOMMENDATIONS = " \

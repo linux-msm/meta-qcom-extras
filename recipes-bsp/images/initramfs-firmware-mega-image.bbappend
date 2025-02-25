@@ -1,5 +1,5 @@
 # Inforce / Penguin Edge devkits
 PACKAGE_INSTALL += " \
-    packagegroup-firmware-ifc6410 \
-    packagegroup-firmware-ifc6560 \
+    packagegroup-ifc6410-firmware \
+    packagegroup-ifc6560-firmware \
 "
