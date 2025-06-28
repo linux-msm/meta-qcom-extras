@@ -8,7 +8,7 @@ jobs:
     uses: ./.github/workflows/build-template.yml
     with:
       host: debian-bookworm
-      images: initramfs-firmware-image initramfs-firmware-mega-image
+      images: initramfs-firmware-mega-image
         initramfs-firmware-ifc6410-image initramfs-firmware-ifc6560-image
         initramfs-firmware-ecs-liva-qc710-image
         initramfs-firmware-lenovo-miix-630-image
