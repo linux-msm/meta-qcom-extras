@@ -16,6 +16,9 @@ DEPENDS += "pil-squasher-native"
 
 VENDOR_IMG_SPARSE ?= "1"
 
+DSP_QCOM_BASE_PATH = "${datadir}/qcom"
+DSP_QCOM_PATH = "${DSP_QCOM_BASE_PATH}/${FW_QCOM_SUBDIR}"
+
 PACKAGES =+ "${PN}-dsp-binaries"
 INSANE_SKIP:${PN}-dsp-binaries += "arch libdir file-rdeps textrel"
 FILES:${PN}-dsp-binaries = "${DSP_QCOM_BASE_PATH}"
