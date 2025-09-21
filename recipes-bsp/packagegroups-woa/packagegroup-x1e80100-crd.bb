@@ -13,5 +13,5 @@ RRECOMMENDS:${PN}-firmware = " \
     firmware-qcom-x1e80100 \
     linux-firmware-qcom-x1e80100-audio \
     linux-firmware-qcom-x1e80100-compute \
-    linux-firmware-qcom-x1e80100-venus \
+    linux-firmware-qcom-vpu \
 "
