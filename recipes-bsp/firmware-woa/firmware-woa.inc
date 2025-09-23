@@ -30,7 +30,7 @@ do_install:append() {
     ls ${B}/*.elf && install -m 0644 ${B}/*.elf ${D}${FW_QCOM_PATH}
     ls ${B}/bdwlan.* && install -m 0644 ${B}/bdwlan.* ${D}${FW_QCOM_PATH}
 
-    install -m 0644 ${UNPACKDIR}/*.jsn ${D}${FW_QCOM_PATH}
+    find ${UNPACKDIR} -name "*.jsn" -exec install -m 0644 {} ${D}${FW_QCOM_PATH} \;
 }
 
 # cabinet filenams are neither unique nor contain the version. Construct
