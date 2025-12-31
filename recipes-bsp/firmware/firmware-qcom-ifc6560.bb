@@ -15,6 +15,7 @@ FW_QCOM_LIST = "\
     cdsp.mbn \
     mba.mbn modem.mbn modemuw.jsn \
     venus.mbn \
+    wlanmdsp.mbn \
 "
 
 S = "${UNPACKDIR}"
@@ -29,4 +30,5 @@ SPLIT_FIRMWARE_PACKAGES = "\
     linux-firmware-qcom-${FW_QCOM_NAME}-compute \
     linux-firmware-qcom-${FW_QCOM_NAME}-modem \
     linux-firmware-qcom-${FW_QCOM_NAME}-venus \
+    linux-firmware-qcom-${FW_QCOM_NAME}-wifi \
 "
