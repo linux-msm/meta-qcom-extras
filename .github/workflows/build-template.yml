@@ -30,12 +30,14 @@ on:
         required: true
 
 env:
-  POKY_URL: https://git.yoctoproject.org/poky
-  OE_URL: https://github.com/openembedded/meta-openembedded
+  BB_URL: https://github.com/openembedded/bitbake
+  OE_CORE_URL: https://github.com/openembedded/openembedded-core
+  META_OE_URL: https://github.com/openembedded/meta-openembedded
+  META_YOCTO_URL: https://git.yoctoproject.org/meta-yocto
   QCOM_URL: https://github.com/qualcomm-linux/meta-qcom
-  DISTRO: poky
+  DISTRO: poky-altcfg
   TCLIBC: glibc musl
-  KERNELS: linaro-qcomlt yocto
+  KERNELS: yocto
 
 jobs:
   build:
@@ -58,20 +60,24 @@ jobs:
 
         common: &commondata
           container: ${{inputs.host}}
-          envsetup: poky/oe-init-build-env
+          envsetup: openembedded-core/oe-init-build-env
           sources:
             git_trees:
               - branch: ${{inputs.branch}}
-                url: $POKY_URL
+                url: $BB_URL
               - branch: ${{inputs.branch}}
-                url: $OE_URL
+                url: $OE_CORE_URL
+              - branch: ${{inputs.branch}}
+                url: $META_OE_URL
+              - branch: ${{inputs.branch}}
+                url: $META_YOCTO_URL
               - branch: ${{inputs.branch}}
                 url: $QCOM_URL
               - ${{inputs.ref_type}}: ${{inputs.ref}}
                 url: ${{inputs.url}}
           distro: $DISTRO
           bblayers_conf:
-            - BBLAYERS += '../$(echo ${{github.repository}} | cut -d'/' -f2) ../meta-openembedded/meta-oe ../meta-qcom'
+            - BBLAYERS += '../$(echo ${{github.repository}} | cut -d'/' -f2) ../meta-openembedded/meta-oe ../meta-yocto/meta-poky ../meta-qcom'
           artifacts: ["licenses"]
         EOF
 
