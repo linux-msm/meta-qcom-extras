@@ -15,7 +15,7 @@ require recipes-bsp/firmware-nexus/firmware-qcom-nexus.inc
 RADIO_VFAT = "1"
 require recipes-bsp/firmware-nexus/firmware-qcom-radio.inc
 
-do_install:append() {
+do_install:prepend() {
     install -d ${D}${FW_QCOM_PATH}
 
     install -m 0644 adsp.mbn ${D}${FW_QCOM_PATH}

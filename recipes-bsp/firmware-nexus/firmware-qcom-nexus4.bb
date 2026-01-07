@@ -18,7 +18,7 @@ PV:append = "+git${SRCPV}"
 
 RDEPENDS:${PN} += "linux-firmware-qcom-adreno-a3xx"
 
-do_install:append() {
+do_install:prepend() {
     install -d ${D}${FW_QCOM_PATH}
 
     install -m 0644 dsps.mbn ${D}${FW_QCOM_PATH}

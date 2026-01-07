@@ -15,7 +15,7 @@ SRC_URI += "git://android.googlesource.com/device/asus/${FW_QCOM_NAME};protocol=
 SRCREV_aosp = "9d9fee956a9c4c7be4f69f7a472d3fc0e759c2dd"
 PV:append = "+git${SRCPV}"
 
-do_install:append() {
+do_install:prepend() {
     install -d ${D}${FW_QCOM_PATH}
 
     install -m 0644 dsps.mbn ${D}${FW_QCOM_PATH}
