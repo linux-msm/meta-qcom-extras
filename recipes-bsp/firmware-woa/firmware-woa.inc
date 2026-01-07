@@ -23,7 +23,7 @@ do_compile:append() {
     fi
 }
 
-do_install:append() {
+do_install:prepend() {
     install -d ${D}${FW_QCOM_PATH}
 
     install -m 0644 ${B}/*.mbn ${D}${FW_QCOM_PATH}
