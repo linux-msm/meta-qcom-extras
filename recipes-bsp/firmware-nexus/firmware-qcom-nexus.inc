@@ -24,7 +24,7 @@ do_compile() {
     done
 }
 
-do_install() {
+do_install:prepend() {
     install -d ${D}${FW_QCOM_PATH}
     install -m 0644 license.txt ${D}${FW_QCOM_PATH}
 }

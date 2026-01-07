@@ -68,7 +68,7 @@ do_compile() {
     done
 }
 
-do_install() {
+do_install:prepend() {
     install -d ${D}${FW_QCOM_PATH}
     for fw in adsp cdsp ipa_fws modem slpi venus ; do
         ls ${B}/$fw*.mbn && install -m 0644 ${B}/$fw*.mbn ${D}${FW_QCOM_PATH}

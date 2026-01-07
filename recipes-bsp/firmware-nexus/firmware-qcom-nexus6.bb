@@ -11,7 +11,7 @@ RDEPENDS:${PN} += "linux-firmware-qcom-adreno-a4xx"
 
 require recipes-bsp/firmware-nexus/firmware-qcom-nexus.inc
 
-do_install:append() {
+do_install:prepend() {
     install -d ${D}${FW_QCOM_PATH}
 
     install -m 0644 adsp.mbn ${D}${FW_QCOM_PATH}
