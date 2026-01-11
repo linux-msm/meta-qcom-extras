@@ -6,6 +6,8 @@ require recipes-bsp/firmware/firmware-qcom.inc
 
 WOA_FW_URL = "https://github.com/WOA-Project/Qualcomm-Reference-Drivers/raw/master/${WOA_SUBDIR}/${PV}"
 
+FILES:${PN} = ""
+
 FILES:linux-firmware-qcom-${FW_QCOM_NAME}-adreno += "${FW_QCOM_PATH}/qcdxkmsuc*.mbn*"
 FILES:linux-firmware-qcom-${FW_QCOM_NAME}-audio += "${FW_QCOM_PATH}/qcadsp*.mbn*"
 FILES:linux-firmware-qcom-${FW_QCOM_NAME}-compute += "${FW_QCOM_PATH}/qccdsp*.mbn*"
