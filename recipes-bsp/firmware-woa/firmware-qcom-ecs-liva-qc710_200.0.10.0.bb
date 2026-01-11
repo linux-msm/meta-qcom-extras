@@ -3,7 +3,7 @@ DESCRIPTION = "Qualcomm Firmware for ECS Liva QC710 devices"
 LICENSE = "CLOSED"
 
 FW_QCOM_NAME = "ecs-liva-qc710"
-FW_QCOM_SUBDIR = "sc7180/ecs/qc710"
+FW_QCOM_SUBDIR = "sc7180/ecs/liva-qc710"
 WOA_SUBDIR = "ECS/7180_SHOEBOX"
 
 WOA_CABINETS = " \
