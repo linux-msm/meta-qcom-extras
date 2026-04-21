@@ -11,7 +11,6 @@ jobs:
     with:
       host: debian-bookworm
       images: initramfs-firmware-mega-image
-        initramfs-firmware-ifc6410-image initramfs-firmware-ifc6560-image
         initramfs-firmware-ecs-liva-qc710-image
         initramfs-firmware-lenovo-miix-630-image
         initramfs-firmware-lenovo-yoga-c630-image
