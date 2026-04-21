@@ -16,7 +16,6 @@ jobs:
         initramfs-firmware-lenovo-miix-630-image
         initramfs-firmware-lenovo-yoga-c630-image
         initramfs-firmware-sc8180x-image
-        initramfs-firmware-x1e80100-crd-image
 
       machines: qcom-armv8a qcom-armv7a
       variants: >-
