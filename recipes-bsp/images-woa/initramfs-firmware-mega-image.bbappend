@@ -7,5 +7,4 @@ PACKAGE_INSTALL += " \
     packagegroup-lenovo-t14s-g6-firmware \
     packagegroup-lenovo-yoga-slim7x-firmware \
     packagegroup-sc8180x-firmware \
-    packagegroup-x1e80100-crd-firmware \
 "

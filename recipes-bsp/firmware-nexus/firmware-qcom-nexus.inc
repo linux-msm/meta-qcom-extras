@@ -1,4 +1,4 @@
-LICENSE = "Proprietary"
+LICENSE = "LicenseRef-Proprietary"
 LIC_FILES_CHKSUM = "file://license.txt;md5=0d238870f50c84250a14191d17aaf1d5"
 
 SRC_URI = "https://dl.google.com/dl/android/aosp/qcom-${FW_QCOM_NAME}-${AOSP_BUILD}-${CHECKSUM_qcom}.tgz;name=qcom"
@@ -8,6 +8,8 @@ PV = "${AOSP_BUILD}"
 S = "${UNPACKDIR}"
 
 require recipes-bsp/firmware/firmware-qcom.inc
+
+FILES:${PN} = "${nonarch_base_libdir}/firmware/"
 
 DEPENDS += "pil-squasher-native"
 
