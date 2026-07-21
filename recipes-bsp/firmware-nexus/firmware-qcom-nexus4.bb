@@ -1,8 +1,5 @@
 DESCRIPTION = "QCOM Firmware for LGE Google Nexus 4"
 
-LICENSE = "Proprietary"
-LIC_FILES_CHKSUM = "file://license.txt;md5=0d238870f50c84250a14191d17aaf1d5"
-
 FW_QCOM_NAME = "mako"
 FW_QCOM_SUBDIR = "apq8064/LGE/${FW_QCOM_NAME}"
 AOSP_BUILD = "lmy48t"
