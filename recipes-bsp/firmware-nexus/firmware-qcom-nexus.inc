@@ -9,6 +9,8 @@ S = "${UNPACKDIR}"
 
 require recipes-bsp/firmware/firmware-qcom.inc
 
+FILES:${PN} = "${nonarch_base_libdir}/firmware/"
+
 DEPENDS += "pil-squasher-native"
 
 # extract the license file
