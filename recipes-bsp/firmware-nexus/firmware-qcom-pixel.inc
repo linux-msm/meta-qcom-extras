@@ -1,4 +1,4 @@
-LICENSE = "Proprietary"
+LICENSE = "LicenseRef-Proprietary"
 LIC_FILES_CHKSUM ?= "file://license.txt;md5=63a79fa5adc049f2e411b1f700cf0f19"
 
 VENDOR ?= "google_devices"
