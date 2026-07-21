@@ -1,6 +1,6 @@
 DESCRIPTION = "QCOM Firmware for DragonBoard 845c"
 
-LICENSE = "Proprietary"
+LICENSE = "LicenseRef-Proprietary"
 LIC_FILES_CHKSUM = "file://LICENSE.qcom.txt;md5=cbbe399f2c983ad51768f4561587f000"
 
 SRC_URI = "https://releases.linaro.org/96boards/dragonboard845c/qualcomm/firmware/RB3_firmware_${PV}.zip;subdir=${BP}"
